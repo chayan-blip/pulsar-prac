@@ -30,4 +30,16 @@ import org.apache.bookkeeper.mledger.util.Pair;
 	 * @return the name of the cache
 	 */
 	String getName();
+
+	/**
+	 * Insert an entry in the cache.
+	 * <p>
+	 * If the overall limit have been reached, this will trigger the eviction of other entries, possibly from other
+	 * EntryCache instances
+	 * 
+	 * @param entry
+	 * 			the entry to be cached
+	 * @return whether the entry was inserted in cache
+	 */
+	boolean insert(EntryImpl entry);
  }
