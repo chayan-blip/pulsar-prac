@@ -42,4 +42,12 @@ import org.apache.bookkeeper.mledger.util.Pair;
 	 * @return whether the entry was inserted in cache
 	 */
 	boolean insert(EntryImpl entry);
+
+	/**
+	 * Remove from the cache all entries related to the ledger up to the lastPosition included.
+	 * 
+	 * @param lastPosition
+	 * 			the position of the last entry to be invalidated (inclusive)
+	 */
+	void invalidateEntries(PositionImpl lastPosition);
  }
