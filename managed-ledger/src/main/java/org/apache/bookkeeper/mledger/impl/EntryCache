@@ -50,4 +50,12 @@ import org.apache.bookkeeper.mledger.util.Pair;
 	 * 			the position of the last entry to be invalidated (inclusive)
 	 */
 	void invalidateEntries(PositionImpl lastPosition);
+
+	/**
+	 * Remove from the cache all the entries belonging to a specific ledger
+	 * 
+	 * @param ledgerId
+	 * 				the ledger id
+	 */
+	void invalidateAllEntries(long ledgerId);
  }
