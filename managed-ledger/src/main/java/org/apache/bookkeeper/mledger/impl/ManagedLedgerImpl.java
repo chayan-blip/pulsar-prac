@@ -14,7 +14,6 @@ public class ManagedLedgerImpl implements ManagedLedger {
     public ManagedLedgerImpl() {
     }
 
-    // TODO: do it later...
     public void initialize() {
     }
 
